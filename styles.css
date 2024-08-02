@@ -1,67 +1,69 @@
-body {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
-    background: #f4f4f4;
+    background-color: #4a4a75;
 }
 
-.calculator {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+#calcu {
+    border-collapse: collapse;
+    width: 250px;
+    background-color: #bdb2b2;
+}
+
+#calcu input[type="text"] {
     width: 100%;
-    max-width: 400px;
+    height: 50px;
+    text-align: right;
+    border: none;
+    padding: 10px;
+    font-size: 1.5em;
+    background-color: #ffffff;
+    color: #000000;
+    border-top: 1px solid #ccc;
 }
 
-.display {
-    background: #222;
-    color: #fff;
-    padding: 20px;
-    text-align: right;
-    font-size: 2rem;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+#calcu input[type="button"] {
+    width: 100%;
+    height: 50px;
+    font-size: 1.2em;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
     box-sizing: border-box;
 }
 
-.buttons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1px;
-    background: #999;
+#calcu input[type="button"]:hover {
+    background-color: #e0e0e0;
 }
 
-.btn {
-    background: #eee;
-    border: none;
-    padding: 20px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    outline: none;
+#calcu td {
+    padding: 5px;
 }
 
-.btn:active {
-    background: #ddd;
-}
-
-.equal {
-    grid-column: span 2;
-    background: #fe9241;
+#calcu input[type="button"].operator {
+    background-color: #ff8c00;
     color: #fff;
 }
 
-.zero {
-    grid-column: span 2;
+#calcu input[type="button"].operator:hover {
+    background-color: #ff9c33;
 }
 
-@media (max-width: 400px) {
-    .display {
-        font-size: 1.5rem;
-    }
-    .btn {
-        padding: 15px;
-        font-size: 1.2rem;
-    }
+#calcu input[type="button"].clear,
+#calcu input[type="button"].delete {
+    background-color: #e57373;
+    color: #fff;
+}
+
+#calcu input[type="button"].clear:hover,
+#calcu input[type="button"].delete:hover {
+    background-color: #ef9a9a;
 }

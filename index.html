@@ -1,35 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <div class="calculator">
-        <div class="display" id="display">0</div>
-        <div class="buttons">
-            <button class="btn" onclick="clearDisplay()">C</button>
-            <button class="btn" onclick="deleteLast()">DEL</button>
-            <button class="btn" onclick="appendOperator('/')">/</button>
-            <button class="btn" onclick="appendOperator('*')">*</button>
-            <button class="btn" onclick="appendNumber('7')">7</button>
-            <button class="btn" onclick="appendNumber('8')">8</button>
-            <button class="btn" onclick="appendNumber('9')">9</button>
-            <button class="btn" onclick="appendOperator('-')">-</button>
-            <button class="btn" onclick="appendNumber('4')">4</button>
-            <button class="btn" onclick="appendNumber('5')">5</button>
-            <button class="btn" onclick="appendNumber('6')">6</button>
-            <button class="btn" onclick="appendOperator('+')">+</button>
-            <button class="btn" onclick="appendNumber('1')">1</button>
-            <button class="btn" onclick="appendNumber('2')">2</button>
-            <button class="btn" onclick="appendNumber('3')">3</button>
-            <button class="btn equal" onclick="calculateResult()">=</button>
-            <button class="btn zero" onclick="appendNumber('0')">0</button>
-            <button class="btn" onclick="appendNumber('.')">.</button>
-        </div>
+    <div class="container">
+        <table id="calcu">
+            <tr>
+                <td colspan="4"><input type="text" placeholder="Result"></td>
+            </tr>
+            
+            <tr>
+                <td colspan="2"><input type="button" value="C" class="clear"></td>
+                <td colspan="2"><input type="button" value="Del" class="delete"></td>
+            </tr>
+            
+            <tr>
+                <td><input type="button" value="9"></td>
+                <td><input type="button" value="8"></td>
+                <td><input type="button" value="7"></td>
+                <td><input type="button" value="/" class="operator"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="6"></td>
+                <td><input type="button" value="5"></td>
+                <td><input type="button" value="4"></td>
+                <td><input type="button" value="*" class="operator"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="3"></td>
+                <td><input type="button" value="2"></td>
+                <td><input type="button" value="1"></td>
+                <td><input type="button" value="-" class="operator"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="0"></td>
+                <td><input type="button" value="."></td>
+                <td><input type="button" value="="></td>
+                <td><input type="button" value="+" class="operator"></td>
+            </tr>
+        </table>
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>
