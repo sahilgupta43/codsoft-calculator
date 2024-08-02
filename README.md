@@ -23,7 +23,7 @@ To get a local copy up and running follow these simple steps:
 The project is deployed using Vercel. You can access the live version of the calculator using the link below:
 - **Click here**: [Live Demo](https://codsoft-calculator-psi.vercel.app/)
 
-## Social Links:
+## Social Links
 
 ### Connect with me on social media:
 
